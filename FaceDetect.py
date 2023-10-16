@@ -2,13 +2,13 @@ import cv2
 
 cam = cv2.VideoCapture(0)
 
-model = cv2.CascadeClassifier("haarcascade_frontalfae_alt.xml")
+model = cv2.CascadeClassifier('haarcascade_frontalface_alt.xml')
 
 
 while True:
     success, img = cam.read()
 
-    faces = model.detectMultiscale(img,1.3,5)
+    faces = model.detectMultiScale(img,1.3,5)
 
     for f in faces:
         x,y,w,h = f
