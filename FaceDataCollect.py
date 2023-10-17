@@ -11,7 +11,7 @@ cam = cv2.VideoCapture(0)
 
 #Ask the name 
 fileName = input("Enter the name of the person:")
-dataset_path = ",/data/"
+dataset_path = "./data/"
 offset = 20
 
 #Model
@@ -70,4 +70,4 @@ np.save(file, faceData)
 
 
 cam.release()
-cv2.destryAllWindows()
+cv2.destroyAllWindows()
